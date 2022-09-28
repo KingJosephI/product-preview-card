@@ -8,12 +8,24 @@
   align-items: center;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.card img {
-  width: 300px;
+.card__image{
   height: 450px;
+  width: 50%;
+  background-image: url('../../images/image-product-desktop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+ 
+.card__description{
+  width: 50%;  
+  padding: 24px;
+}
+
+
 
 .card__description span:first-of-type {
   font-size: 12px;
@@ -23,19 +35,84 @@
 .card__description h1{
   font-family: 'Fraunces', serif;
   font-size: 32px;
+  line-height: 32px;
   color: #1C232B;
   width: 200px;
+}
+
+.card__description p {
+  font-size: 14px;
+  line-height: 23px;
+  color: #6C7289;
 }
 
 
 .card__description button {
   width: 100%;
+  padding: 15px 20px;
+  border: none;
+  background-color: #3D8168;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card__description {
-  padding: 20px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+.card__description button:hover{
+  background-color: #1A4032;
+  cursor: pointer;
 }
 
+.card__description .card__cart-icon{
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+
+.card__description strong{
+  font-size: 32px;
+  line-height: 32px;
+  color: #3D8168;
+  font-family: 'Fraunces', serif;
+  margin-right: 10px;
+}
+
+.card__description strong + span {
+  text-decoration: line-through;
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.card__prices {
+  display: flex;
+  align-items: center;
+  margin: 36px 0;
+}
+
+@media screen and (max-width: 765px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    max-height: 611px;
+    margin: 50px 0;
+  }
+
+  .card__image{
+    height: 240px;
+    background-image: url('../../images/image-product-mobile.jpg');
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .card__description{
+    width: 90%;
+  }
+
+  .card__description h1{
+    width: 100%;
+  }
+}
