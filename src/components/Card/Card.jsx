@@ -1,13 +1,14 @@
 import React from 'react';
-import style from './Card.module.css';
+import './Card.css';
+import productDesktop from '../../images/image-product-desktop.jpg';
 
 const Card = () => {
   return (
-    <div className={style.card}>
-      <div>
-        <img src="" alt="" />
+    <div className="card">
+      <div className="card__container">
+        <img src={productDesktop} alt="Product" />
       </div>
-      <div>
+      <div className="card__description">
         <span>PERFUME</span>
         <h1>Gabrielle Essence Eau De Parfum</h1>
         <p>
